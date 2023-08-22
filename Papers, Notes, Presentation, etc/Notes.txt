@@ -1,0 +1,31 @@
+1. CMD for requesting gpu: srun --pty --partition=debug --time=2:00:00 --gres=gpu:1 bash
+			   srun -c 40 --pty --partition=gpu --time=7-00:00:00 --gres=gpu:1 bash
+			   module load python3.10.9/anaconda
+		           conda activate tf_env
+2. Delete swap files after crash: find . -type f \( -name ".*.s[a-v][a-z]" -o -name ".*.sw[a-p]" \) -delete
+3. Copying files from server to local machine: scp -r sns85@enki.nist.gov:\home\sns85\Generated_Files\Images C:\Users\sns85
+	
+
+
+
+
+
+Notes on Datasets
+	IEMOCAP
+		KAGGLE
+		List of 9 dicts: IDs, 
+		
+		ENKI
+		List of dicts
+			Length of list:
+			Keys of dict: ['start', 'end', 'id', 'v', 'a', 'd', 'emotion', 'emo_evo', 'lsignal', 'rsignal', 'transcription', 'mocap_hand', 'mocap_hand_avg', 'mocap_hand_split', 'mocap_rot', 'mocap_rot_avg', 'mocap_rot_split', 'mocap_head', 'mocap_head_avg', 'mocap_head_split', 'session']
+
+	
+	MELD
+		dev_sent_emo.csv
+			
+
+		test_sent_emo.csv
+
+		train_sent_emo.csv
+
